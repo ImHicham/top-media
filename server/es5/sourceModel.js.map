@@ -1,0 +1,1 @@
+{"version":3,"sources":["sourceModel.js"],"names":[],"mappings":";;;;;;IAAM,WAAW;UAAX,WAAW;wBAAX,WAAW;;;cAAX,WAAW;;;;SAET,kBAAG,EAAE;;;SACL,kBAAG,EAAE;;;QAHP,WAAW","file":"sourceModel.js","sourcesContent":["class sourceModel {\r\n\t//returns a promise\r\n\tsearch () {}\r\n\tfilter () {}\r\n}"],"sourceRoot":"C:\\Users\\stwo\\Desktop\\web\\top-media\\server\\es6"}

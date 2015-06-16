@@ -1,0 +1,19 @@
+{
+  "name": "top-media",
+  "version": "0.0.1",
+  "authors": [
+    "GreenKhulta <elhmidi.hicham@gmail.com>"
+  ],
+  "moduleType": [
+    "es6",
+    "node"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "polymer": "Polymer/polymer#1.0.0",
+    "google-youtube": "GoogleWebComponents/google-youtube#1.1.0",
+    "iron-localstorage": "PolymerElements/iron-localstorage#1.0.0",
+    "paper-material": "PolymerElements/paper-material#1.0.0",
+    "iron-ajax": "PolymerElements/iron-ajax#1.0.0"
+  }
+}
