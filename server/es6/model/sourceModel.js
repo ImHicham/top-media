@@ -21,7 +21,6 @@ class SourceModel {
 	}
 	//returns a promise
 	search () {
-		//return this.clientTwitter.get(this.params);
 		return new Promise((resolve,reject) => {
 	         this.sourceApi.get(this.searchUrl, this.params, (err, data) => {
 	             if(err !== null) return reject(err);

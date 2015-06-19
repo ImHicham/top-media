@@ -27,7 +27,6 @@ var YoutubeSource = (function (_SourceModel) {
 		key: "search",
 		value: function search() {
 			console.log("searching from YoutubeSource");
-
 			return _get(Object.getPrototypeOf(YoutubeSource.prototype), "search", this).call(this);
 		}
 	}, {
@@ -73,10 +72,13 @@ var YoutubeSource = (function (_SourceModel) {
 				this.db.connect().then(function (db) {
 					var collection = db.collection("post");
 					console.log("Connected correctly to server");
-					collection.insert(filteredTweets, function (err, result) {
-						if (err) return err;
-						console.log("inserted %s documents", result.result.n);
-						db.close();
+
+					filteredTweets.forEach(function (tweet) {
+						collection.update({ video_id: tweet.video_id }, tweet, { upsert: true }, function (err, result) {
+							if (err) return err;
+							console.log("inserted %s documents", result.result.n);
+							db.close();
+						});
 					});
 				});
 			}

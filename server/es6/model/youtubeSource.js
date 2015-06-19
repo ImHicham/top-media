@@ -11,7 +11,6 @@ class YoutubeSource extends SourceModel {
 	}
 	search() {
 		console.log("searching from YoutubeSource");
-		
 		return super.search();
 
 	}
@@ -54,11 +53,15 @@ class YoutubeSource extends SourceModel {
 	 		this.db.connect().then( db => {
 	 			var collection = db.collection('post');		
 			  console.log("Connected correctly to server");
-			  	collection.insert(filteredTweets, (err, result) => {
+
+			  filteredTweets.forEach( tweet => {
+			  	collection.update( {video_id: tweet.video_id}, tweet, {upsert: true}, (err, result) => {
 				  	if (err) return err;
 				  	console.log("inserted %s documents", result.result.n);
 				  	db.close();
 			  	});
+			  });
+
 	 		});
 
 	 	}

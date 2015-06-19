@@ -14,14 +14,14 @@
 					<iron-ajax
 					    auto
 					    url="/videos"
-					    params='{"alt":"json", "q":"polymer"}'
+					    params='{"limit":"10", "sort":"best", "skip": "0"}'
 					    handle-as="json"
 					    on-response="handleResponse"
 					    lastResponse="youtubeVideos"
 					    debounce-duration="300">
 					</iron-ajax>	
 
-			<div>
+			<div horizontal around-justified layout>
 				<template is="dom-repeat" items="{{youtubeVideos}}" as="item">
 
 					<paper-material elevation="2">
@@ -55,7 +55,7 @@
 					}
 				},
 				handleResponse: function (data, data2) {
-					this.youtubeVideos = data.detail.response.slice(0, 10);
+					this.youtubeVideos = data.detail.response;
 				}
 			})
 			</script>

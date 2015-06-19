@@ -35,7 +35,6 @@ var SourceModel = (function () {
 		value: function search() {
 			var _this = this;
 
-			//return this.clientTwitter.get(this.params);
 			return new Promise(function (resolve, reject) {
 				_this.sourceApi.get(_this.searchUrl, _this.params, function (err, data) {
 					if (err !== null) return reject(err);

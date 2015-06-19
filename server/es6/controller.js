@@ -34,7 +34,7 @@ module.exports = {
 	    	searchCriteria.scraped_at = {$gte :  options.from, $lte : options.to};
 	    };
 
-	    db.connect().then( (db) => {
+	    db.connect().then( db => {
 	      var collection = db.collection("post");
 	      collection.find(searchCriteria, options).toArray(function (err, data) {
 	        if (err) 
