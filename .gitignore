@@ -1,0 +1,8 @@
+#ignore transpiled es5 code
+
+server/es5
+
+#ignore node modules
+
+node_modules
+client/bower_components
