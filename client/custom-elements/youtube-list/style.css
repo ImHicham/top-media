@@ -3,6 +3,27 @@
 */
 
 paper-material {
-	width: 240px;
+	width: 240px !important;
 	display: inline-block;
 }
+
+paper-slider {
+	width: 80%;
+}
+
+
+.container {
+    display: flex;
+    display: -webkit-flex;
+    display: -moz-flex;
+    justify-content: space-around;
+    -webkit-justify-content: space-around;
+    -moz-justify-content: space-around;
+    flex-flow: row wrap;
+    -webkit-flex-flow: row wrap;
+    -moz-flex-flow: row wrap;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.container .item { width: 240px; margin: 0 1% 24px; }

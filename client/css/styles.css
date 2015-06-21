@@ -7,3 +7,7 @@ html {
 body {
 	margin: 0;
 }
+
+paper-header-panel {
+	margin-bottom: 20px;
+}
