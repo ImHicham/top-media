@@ -38,11 +38,10 @@ module.exports = {
 	    if (params.from && params.to) {
 	    	searchCriteria.scraped_at = {$gte :  params.from, $lte : params.to};
 	    };
-
 	    db.connect().then( db => {
 	      var collection = db.collection("post");
 	      collection.find(searchCriteria, projection, options).toArray(function (err, data) {
-	        if (err) 
+	        if (err)
 	          return err;
 	        res.json(data);
 	      });
